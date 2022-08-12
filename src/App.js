@@ -6,10 +6,14 @@ import About from './Components/About/index';
 import Contact from './Components/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Welcome from './Components/Welcome/index';
+import { useTitle } from './Helpers/useTitle';
 
 
-function App() {
+function App() {  
+  useTitle("My Website")
+
   return (
+
     <Router>
       <Fragment>
         <Navbar />
@@ -20,6 +24,7 @@ function App() {
         </Routes>
       </Fragment>
     </Router>
+ 
   )
 
 };

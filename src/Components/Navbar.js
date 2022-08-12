@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -24,15 +23,6 @@ const NavbarComponent = () => {
             </Nav.Link>
           </Stack>
         </Nav>
-
-        {/* <Stack direction="horizontal" gap={2}>
-          <Button as="a" variant="primary">
-            Button as link
-          </Button>
-          <Button as="a" variant="success">
-            Button as link
-          </Button>
-        </Stack> */}
 
       </Container>
     </Navbar>

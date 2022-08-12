@@ -13,22 +13,20 @@ class Welcome extends React.Component {
         this.state = {
             Title: 'Software Engineer',
             Name: ['Jared', 'Kristopher', 'Ong'],
-            Goals: 'To work in a company where I can utilize, expand and share my knowledge and ability to a challenging position in office where I can achieve professional growth for the best interest of the company.'
         };
     }
 
     render() {
-
-
-
         return (
             <div>
                 <Container>
-                    <div className='d-flex aligh-items-center justify-content-center customHeight'>
+                    <div className='d-flex aligh-items-center justify-content-center customHeight header'>
                         <Row>
-                            {/* <Col sm={12}>
-                    </Col> */}
-                            <TextComponent text={"Hey there!"} fontSize={35} color={"#1C3B4F"} />
+                            <Col sm={12}>
+                            <TextComponent text={"Hey there!"} color={"#1C3B4F"} />
+                            <TextComponent text={"I'm " + this.state.Name[0]} color={"#1C3B4F"} />
+
+                            </Col>
                         </Row>
 
                     </div>

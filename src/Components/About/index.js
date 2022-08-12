@@ -5,7 +5,6 @@ import '../../App.css';
 import TextComponent from '../Text';
 import React from 'react';
 
-
 class About extends React.Component {
 
     constructor(props) {
@@ -19,30 +18,33 @@ class About extends React.Component {
 
     render() {
 
-
-
         return (
             <div style={{ background: "#D3D3D3" }}>
                 <Container>
                     <Row style={{ justifyContent: 'center' }}>
 
-                        <Col sm={3} className="bg-main" >
+                        <Col sm={5} className="bg-main" >
                             <Container>
-                                <h1 style={{ fontSize: "50px", marginTop: "100px" }} className="title-name">{this.state.Name[0]}</h1>
-                                <h1 style={{ fontSize: "50px" }} className="title-name">{this.state.Name[1]} </h1>
-                                <h1 style={{ fontSize: "50px" }} className="title-name">{this.state.Name[2]} </h1>
-                                <div style={{ fontSize: "25px" }} className="sub-title-name">{this.state.Title}</div>
+                                <div style={{ marginTop: "100px" }} className="title-name title">{this.state.Name[0]}</div>
+                                <div className="title-name title">{this.state.Name[1]} </div>
+                                <div className="title-name title">{this.state.Name[2]} </div>
+                                <div className="sub-title-name sub-title">{this.state.Title}</div>
                                 <div style={{ marginTop: "50px" }}></div>
                                 <hr class="half-rule" />
-                                <TextComponent text={"PROFESSIONAL GOALS:"} fontSize={20} color={"#1C3B4F"} />
+                                <TextComponent text={"PROFESSIONAL GOALS:"} fontSize={20} color={"#1C3B4F"} spacing={true}/>
                                 <TextComponent text={this.state.Goals} fontSize={15} />
                                 <div style={{ marginTop: "50px" }}></div>
-                                <TextComponent text={"PROFESSIONAL SKILLS:"} fontSize={20} color={"#1C3B4F"} />
+                                <TextComponent text={"PROFESSIONAL SKILLS:"} fontSize={20} color={"#1C3B4F"} spacing={true}/>
                                 <TextComponent text={"• PHP"} fontSize={15} />
                                 <TextComponent text={"• JavaScript"} fontSize={15} />
                                 <TextComponent text={"• React Native"} fontSize={15} />
+                                <TextComponent text={"• ASP.Net"} fontSize={15} />
+                                <TextComponent text={"• Figma"} fontSize={15} />
+                                <TextComponent text={"• Adobe XD"} fontSize={15} />
+
+
                                 <div style={{ marginTop: "50px" }}></div>
-                                <TextComponent text={"CONTACT DETAILS:"} fontSize={20} color={"#1C3B4F"} />
+                                <TextComponent text={"CONTACT DETAILS:"} fontSize={20} color={"#1C3B4F"} spacing={true}/>
                                 <TextComponent text={"Blk 15 Lot 10 Avecilla Cor. Moran st. BFRV Las Piñas "} fontSize={15} />
                                 <TextComponent text={"Cell: +63 976 103 7705"} fontSize={15} />
                                 <TextComponent text={"kristopherong@yahoo.com"} fontSize={15} />
@@ -50,11 +52,11 @@ class About extends React.Component {
                             </Container>
 
                         </Col>
-                        <Col sm={4} style={{ background: "white", }}>
+                        <Col sm={7} style={{ background: "white", }}>
                             <div style={{ marginTop: "100px" }}></div>
-                            <TextComponent text={"EMPLOYTMENT HISTORY"} fontSize={20} color={"#E7762B"} />
+                            <TextComponent text={"EMPLOYTMENT HISTORY:"} fontSize={20} color={"#E7762B"} spacing={true}/>
                             <hr class="whole-rule" />
-                            <TextComponent text={"SOFTWARE ENGINEER"} fontSize={20} color={"#1C3B4F"} />
+                            <TextComponent text={"SOFTWARE ENGINEER"} fontSize={20} color={"#1C3B4F"} spacing={true}/>
                             <TextComponent text={"Cyberland Consultancy Pte. Ltd."} fontSize={15} color={"#1C3B4F"} fontWeight={"normal"} />
                             <TextComponent text={"Dec  2020 - Present"} fontSize={15} color={"#1C3B4F"} fontWeight={"normal"} />
                             <Container>
@@ -68,9 +70,25 @@ class About extends React.Component {
                                 <TextComponent text={'• Develop and maintain software applications.'} fontSize={15} color={"#E7762B"} fontWeight={"normal"} />
                                 <TextComponent text={'• Design and Create prototypes for clients using AdobeXD and Figma.'} fontSize={15} color={"#E7762B"} fontWeight={"normal"} />
                             </Container>
-
-
-
+                            <div style={{ marginTop: "50px" }}></div>
+                            <TextComponent text={"SOFTWARE DEVELOPER"} fontSize={20} color={"#1C3B4F"} spacing={true}/>
+                            <TextComponent text={"Antivo technologies Inc."} fontSize={15} color={"#1C3B4F"} fontWeight={"normal"} />
+                            <TextComponent text={"June 2019- Dec 2020"} fontSize={15} color={"#1C3B4F"} fontWeight={"normal"} />
+                            <Container>
+                                <TextComponent text={'• Modified existing applications  (risk and compliance system)'} fontSize={15} color={"#E7762B"} fontWeight={"normal"} />
+                                <TextComponent text={'• Developed a travel-guide app that aims to help travelers and travelers at heart find and explore the perfect destinations and attractions that would suit their preferences.'} fontSize={15} color={"#E7762B"} fontWeight={"normal"} />
+                                <div style={{ marginLeft: "20px" }}>
+                                    <TextComponent text={'o Developed using ASP.net  Web forms, API.Net Web API'} fontSize={15} color={"#E7762B"} fontWeight={"normal"} />
+                                    <TextComponent text={'o Database: MS SQL'} fontSize={15} color={"#E7762B"} fontWeight={"normal"} />
+                                    <TextComponent text={'o Front End: Javascript, Bootstrap'} fontSize={15} color={"#E7762B"} fontWeight={"normal"} />
+                                </div>
+                            </Container>
+                            <div style={{ marginTop: "100px" }}></div>
+                            <TextComponent text={"ACADEMIC BACKGROUND:"} fontSize={20} color={"#E7762B"} spacing={true}/>
+                            <hr class="whole-rule" />
+                            <TextComponent text={"UNIVERSITY OF PERPETUAL HELP SYSTEM DALTA"} fontSize={20} color={"#1C3B4F"} />
+                            <TextComponent text={'Class of 2019'} fontSize={15} color={"#E7762B"} fontWeight={"normal"} />
+                                <TextComponent text={'Bachelor of Science in Computer Science'} fontSize={15} color={"#E7762B"} fontWeight={"normal"} />
                         </Col>
                     </Row>
                 </Container>
@@ -79,4 +97,5 @@ class About extends React.Component {
     }
 }
 export default About;
+
 
