@@ -4,7 +4,8 @@ import Col from 'react-bootstrap/Col';
 import '../../App.css';
 import TextComponent from '../Text';
 import React from 'react';
-
+import Sidebar from './sidebar';
+import './Dashboard.css';
 
 class Welcome extends React.Component {
 

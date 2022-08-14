@@ -19,11 +19,10 @@ class About extends React.Component {
     render() {
 
         return (
-            <div style={{ background: "#D3D3D3" }}>
+            <div style={{ background: "#D3D3D3" , width:"100%"}}>
                 <Container>
-                    <Row style={{ justifyContent: 'center' }}>
-
-                        <Col sm={5} className="bg-main" >
+                    <Row style={{ justifyContent: 'center', display:'flex' }}>
+                        <Col sm={4} style={{ minWidth:"50vh" }}  className="bg-main" >
                             <Container>
                                 <div style={{ marginTop: "100px" }} className="title-name title">{this.state.Name[0]}</div>
                                 <div className="title-name title">{this.state.Name[1]} </div>
@@ -32,7 +31,10 @@ class About extends React.Component {
                                 <div style={{ marginTop: "50px" }}></div>
                                 <hr class="half-rule" />
                                 <TextComponent text={"PROFESSIONAL GOALS:"} fontSize={20} color={"#1C3B4F"} spacing={true}/>
+
+                                <div style={{marginRight:"15vh"}}>
                                 <TextComponent text={this.state.Goals} fontSize={15} />
+                                </div>
                                 <div style={{ marginTop: "50px" }}></div>
                                 <TextComponent text={"PROFESSIONAL SKILLS:"} fontSize={20} color={"#1C3B4F"} spacing={true}/>
                                 <TextComponent text={"• PHP"} fontSize={15} />
@@ -52,9 +54,9 @@ class About extends React.Component {
                             </Container>
 
                         </Col>
-                        <Col sm={7} style={{ background: "white", }}>
+                        <Col sm={4} style={{ background: "white", minWidth:"50vh" }}>
                             <div style={{ marginTop: "100px" }}></div>
-                            <TextComponent text={"EMPLOYTMENT HISTORY:"} fontSize={20} color={"#E7762B"} spacing={true}/>
+                            <TextComponent text={"EMPLOYMENT HISTORY:"} fontSize={20} color={"#E7762B"} spacing={true}/>
                             <hr class="whole-rule" />
                             <TextComponent text={"SOFTWARE ENGINEER"} fontSize={20} color={"#1C3B4F"} spacing={true}/>
                             <TextComponent text={"Cyberland Consultancy Pte. Ltd."} fontSize={15} color={"#1C3B4F"} fontWeight={"normal"} />

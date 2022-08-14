@@ -109,30 +109,22 @@
 }
 
 
-@media screen and (max-width: 1024) {
-  div.title {
-    font-size: 9vh;
-  }
-  div.sub-title{
-    font-size: 8vh;
-  }
-}
-
 @media screen and (min-width: 601px) {
   div.title {
-    font-size: 6vh;
+    font-size: 5vh;
   }
   div.sub-title{
-    font-size: 5vh;
+    font-size: 4vh;
   }
 }
 
 @media screen and (max-width: 600px) {
   div.title {
-    font-size: 8vh;
-  }
-  div.sub-title{
     font-size: 7vh;
   }
+  div.sub-title{
+    font-size: 6vh;
+  }
 }
+
 
