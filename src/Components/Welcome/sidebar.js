@@ -16,7 +16,7 @@ class Sidebar extends React.Component {
         const isActive = this.props.isActive;
 
         return (
-            <Navbar  variant="dark" className={isActive ? "d-md-block bg-light sidebar" : "d-none bg-light sidebar"}>
+            <Navbar collapseOnSelect variant="dark" className={isActive ? "d-md-block bg-light sidebar" : "d-none bg-light sidebar"}>
                 <Nav
                     activeKey="/home"
                     // onSelect={selectedKey => alert(`selected ${selectedKey}`)}
