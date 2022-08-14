@@ -19,10 +19,10 @@ class About extends React.Component {
     render() {
 
         return (
-            <div style={{ background: "#D3D3D3" , width:"100%"}}>
+            <div style={{width:"100%"}}>
                 <Container>
                     <Row style={{ justifyContent: 'center', display:'flex' }}>
-                        <Col sm={4} style={{ minWidth:"50vh" }}  className="bg-main" >
+                        <Col sm={4} style={{ minWidth:"50vh",borderTopRightRadius:"50vh",borderTopLeftRadius:"10vh"}}  className="bg-main" >
                             <Container>
                                 <div style={{ marginTop: "100px" }} className="title-name title">{this.state.Name[0]}</div>
                                 <div className="title-name title">{this.state.Name[1]} </div>

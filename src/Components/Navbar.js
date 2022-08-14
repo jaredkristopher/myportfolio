@@ -9,8 +9,8 @@ class NavbarComponent extends React.Component {
   render() {
     return (
       <Navbar
-        bg="dark"
-        variant="dark"
+        // bg="dark"
+        variant="light"
         collapseOnSelect
         expand="lg"
         style={{ width: "100%" }}
@@ -22,7 +22,7 @@ class NavbarComponent extends React.Component {
 
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
+            <Nav className="mx-auto ">
               <Nav.Link as={Link} to="/">
                 Home
               </Nav.Link>
