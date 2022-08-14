@@ -16,12 +16,12 @@ class NavbarComponent extends React.Component {
         style={{ width: "100%" }}
       >
         <Container>
-          <Nav className="mr-auto">
+          {/* <Nav className="mr-auto">
             <Button onClick={this.props.jared}>Side Menu</Button>
-          </Nav>
+          </Nav> */}
 
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
+            <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link as={Link} to="/">
                 Home
