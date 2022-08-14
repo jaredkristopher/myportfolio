@@ -24,7 +24,7 @@ class Sidebar extends React.Component {
                 >
                     <div className="sidebar-sticky"></div>
                     <Nav.Item >
-                        <Nav.Link href="/home">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                     <Nav.Link as={Link} to="/about">About</Nav.Link>
