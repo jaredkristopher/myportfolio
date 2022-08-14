@@ -8,24 +8,29 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 class NavbarComponent extends React.Component {
   render() {
     return (
-      <Navbar bg="dark" variant="dark" style={{ width: "100%" }}>
+      <Navbar
+        bg="dark"
+        variant="dark"
+        collapseOnSelect
+        expand="lg"
+        style={{ width: "100%" }}
+      >
         <Container>
-          <Nav className="me-auto">
-            <Stack direction="horizontal" gap={2}>
-              <Button onClick={this.props.jared}>Side Menu</Button>
-              {/* <Navbar.Brand> */}
-                <Nav.Link as={Link} to="/">
-                  Home
-                </Nav.Link>
-              {/* </Navbar.Brand> */}
+          <Nav className="mr-auto">
+            <Button onClick={this.props.jared}>Side Menu</Button>
+          </Nav>
+
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
               <Nav.Link as={Link} to="/about">
                 About
               </Nav.Link>
               <Nav.Link as={Link} to="/contactus">
                 Contact Us
               </Nav.Link>
-            </Stack>
-          </Nav>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     );

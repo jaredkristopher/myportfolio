@@ -19,7 +19,7 @@ class Sidebar extends React.Component {
             <Navbar  variant="dark" className={isActive ? "d-md-block bg-light sidebar" : "d-none bg-light sidebar"}>
                 <Nav
                     activeKey="/home"
-                    onSelect={selectedKey => alert(`selected ${selectedKey}`)}
+                    // onSelect={selectedKey => alert(`selected ${selectedKey}`)}
                     style={{flexDirection: "column"}}
                 >
                     <div className="sidebar-sticky"></div>
