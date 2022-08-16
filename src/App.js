@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { MemoryRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import About from "./Components/About/index";
@@ -10,6 +10,7 @@ import { useTitle } from "./Helpers/useTitle";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Sidebar from "./Components/Welcome/sidebar";
 import "./Components/Welcome/Dashboard.css";
+import Playground from "./Components/Playground";
 
 function App() {
   useTitle("My Website");
@@ -33,6 +34,7 @@ function App() {
                 <Route exact path="/" element={<Welcome />} />
                 <Route exact path="/about" element={<About />} />
                 <Route exact path="/contactus" element={<Contact />} />
+                <Route exact path="/playground" element={<Playground />} />
               </Routes>
             </Col>
           </Row>
