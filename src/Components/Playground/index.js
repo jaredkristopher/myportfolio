@@ -66,14 +66,28 @@ class Playground extends React.Component {
   updateInputValue(event) {
     const val = event.target.value;
     // ...
+    console.log(val.replace(/[|&;$%@"<>()+,]/g, ""));
     this.setState({
-      inputValue: val,
+      inputValue: val.replace(/\D/g, "", ""),
     });
+  }
+
+  handleInput(e) {
+    console.log(e.target.value);
+    this.state.inputValue = e.target.value;
+    this.setState({});
   }
 
   render() {
     return (
-      <div style={{  display: "flex"  ,width: "100%", justifyContent: "center" , alignContent:"center"}}>
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "center",
+          alignContent: "center",
+        }}
+      >
         <Container>
           <div style={{ fontSize: "10vh" }}>
             {this.state.random.toFixed(2) + " " + this.state.text}
@@ -94,8 +108,8 @@ class Playground extends React.Component {
               Lo
             </Button>
           </div>
-          <Row>
-            <Col xs={5}>
+          <Col>
+            <Col xs={3}>
               <InputGroup className="m-3">
                 <InputGroup.Text>$</InputGroup.Text>
                 <InputGroup.Text>Place bet</InputGroup.Text>
@@ -106,10 +120,58 @@ class Playground extends React.Component {
                 />
               </InputGroup>
             </Col>
+            <Col xs={7}>
+              <Col>
+                <Col>
+                  <Button
+                    style={{ margin: "5px" }}
+                    variant="outline-primary"
+                    value="50"
+                    onClick={(e) => this.handleInput(e, "value")}
+                  >
+                    50
+                  </Button>{" "}
+                  <Button
+                    style={{ margin: "5px" }}
+                    variant="outline-primary"
+                    value="100"
+                    onClick={(e) => this.handleInput(e, "value")}
+                  >
+                    100
+                  </Button>{" "}
+                  <Button
+                    style={{ margin: "5px" }}
+                    variant="outline-primary"
+                    value="200"
+                    onClick={(e) => this.handleInput(e, "value")}
+                  >
+                    200
+                  </Button>{" "}
+                </Col>
+                <Col>
+                  <Button
+                    style={{ margin: "5px" }}
+                    variant="outline-primary"
+                    value="500"
+                    onClick={(e) => this.handleInput(e, "value")}
+                  >
+                    500
+                  </Button>{" "}
+                  <Button
+                    style={{ margin: "5px" }}
+                    variant="outline-primary"
+                    value={this.state.balance}
+                    onClick={(e) => this.handleInput(e, "value")}
+                  >
+                    All-in
+                  </Button>{" "}
+                </Col>
+              </Col>
+            </Col>
             <div style={{ fontSize: "5vh" }}>
               {"Balance:" + " " + this.state.balance}
             </div>
-          </Row>
+          </Col>
           <Button onClick={this.handleClick.bind(this)}>Roll</Button>
         </Container>
       </div>
