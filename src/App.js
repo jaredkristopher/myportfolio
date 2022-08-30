@@ -11,6 +11,8 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import Sidebar from "./Components/Welcome/sidebar";
 import "./Components/Welcome/Dashboard.css";
 import Playground from "./Components/Playground";
+import Playground2 from "./Components/Playground2";
+
 
 function App() {
   useTitle("My Website");
@@ -35,6 +37,8 @@ function App() {
                 <Route exact path="/about" element={<About />} />
                 <Route exact path="/contactus" element={<Contact />} />
                 <Route exact path="/playground" element={<Playground />} />
+                <Route exact path="/playground2" element={<Playground2 />} />
+
               </Routes>
             </Col>
           </Row>

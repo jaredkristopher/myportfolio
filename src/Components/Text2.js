@@ -5,6 +5,7 @@ function TextComponent2(props) {
   return (
     <div
       style={{
+        textAlign:"center",
         fontSize: props.fontSize,
         color: props.color,
         fontWeight: props.fontWeight == null ? "bold" : props.fontWeight,

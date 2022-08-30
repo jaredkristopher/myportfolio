@@ -6,7 +6,7 @@ import TextComponent from "../Text2";
 import React from "react";
 import Sidebar from "./sidebar";
 import "./Dashboard.css";
-import Cover from "../../Assets/images/jared.png";
+import Cover from "../../Assets/images/computers.png";
 import { Button, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -17,29 +17,40 @@ class Welcome extends React.Component {
       Title: "Software Engineer",
       Name: ["Jared", "Kristopher", "Ong"],
     };
+    this.escFunction = this.escFunction.bind(this);
+  }
+
+  escFunction(event) {
+    if (event.key === "ArrowDown") {
+      //Do whatever when esc is pressed
+      console.log("aw");
+    }
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(event.code) > -1) {
+      event.preventDefault();
+  }
+  }
+  componentDidMount() {
+    document.addEventListener("keydown", this.escFunction, false);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.escFunction, false);
   }
 
   render() {
     return (
       <div>
         <Container>
-          <div
-            className="d-flex aligh-items-center justify-content-center header"
-            style={{ marginTop: "10vh" }}
-          >
+          <div style={{ marginTop: "10vh" }}>
             <Row>
               <Col
-                sm={6}
-                className="bg-main"
+                sm={12}
                 style={{
+                  alignContent: "center",
                   alignSelf: "center",
-                  borderTopLeftRadius: "10vh",
-                  borderTopRightRadius: "50vh",
-                  borderBottomLeftRadius: "40vh",
-                  borderBottomRightRadius: "10vh",
-                  minHeight:"40vh"
+                  minHeight: "40vh",
                 }}
               >
+                {" "}
                 <TextComponent
                   text={"Hello, I'm Jared,"}
                   fontSize="5vh"
@@ -55,16 +66,31 @@ class Welcome extends React.Component {
                   fontSize="3.5vh"
                   color={"#1C3B4F"}
                 />
-              </Col>
-
-              <Col sm={6} style={{ alignSelf: "center" }}>
-                <img variant="top" src={Cover} height="auto" width="500vh" />
-              </Col>
-              <Link as={Link} to="/about">
+                 <Link as={Link} to="/about">
                 <Button style={{ marginTop: "5vh" }} variant="outline-primary">
                   Resume
                 </Button>
               </Link>
+              </Col>
+              <Col>
+              </Col>
+              {/* <Col
+                sm={6}
+                className="bg-main"
+                style={{
+                  alignSelf: "center",
+                  borderTopLeftRadius: "10vh",
+                  borderTopRightRadius: "50vh",
+                  borderBottomLeftRadius: "40vh",
+                  borderBottomRightRadius: "10vh",
+                  minHeight: "40vh",
+                }}
+              ></Col> */}
+
+              {/* <Col sm={12} style={{ alignSelf: "center" }}>
+                <img variant="top" src={Cover} height="auto" width="500vh" />
+              </Col> */}
+             
             </Row>
           </div>
         </Container>
